@@ -1,4 +1,4 @@
-Identifier	Titel		URL	Relevanz	Bsp:Publikation
+Identifier	Titel	Kurzform	URL	Relevanz	Beispiele
 db:nyse	New York Stack Exchange	NYSE	https://www.nyse.com/	hoch	https://mpra.ub.uni-muenchen.de/id/eprint/30078 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924
 db:eulfs	Eurostat LFS		http://ec.europa.eu/eurostat/web/lfs/data/main-tables	mittel	http://doi.org/10.17877/DE290R-1856
 db:toyo_keizai	Toyo Keizai Corporate Social Responsibility Database		http://dbs.toyokeizai.net/en/	hoch	http://doi.org/10.1080/07474938.2014.977086 ; https://mpra.ub.uni-muenchen.de/id/eprint/27721
@@ -14,7 +14,7 @@ db:wfe	World Federation of Exchanges		http://www.world-exchanges.org/home/index.
 db:euklems	EU KLEMS	EU KLEMS	http://www.euklems.net/		https://mpra.ub.uni-muenchen.de/id/eprint/37965
 db:maddison	Maddison Project Database		http://www.ggdc.net/maddison/maddison-project/home.htm		https://mpra.ub.uni-muenchen.de/id/eprint/71488
 db:oecd	OECD.Stat		https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/34343
-db:oecdeo	OECD Economic Outlook	OECD-EO	https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/31727 ; https://mpra.ub.uni-muenchen.de/id/eprint/15841
+db:oecdeo	OECD Economic Outlook	OECD-EO	https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/31727 ; https://mpra.ub.uni-muenchen.de/id/eprint/15841 ; http://dx.doi.org/10.1111/jofi.12206
 db:worldscope	Thomson Reuters WorldScope	WorldScope	https://www.rimes.com/data/thomson-reuters-worldscope/		https://mpra.ub.uni-muenchen.de/id/eprint/35221 ; https://mpra.ub.uni-muenchen.de/id/eprint/6040 ; https://mpra.ub.uni-muenchen.de/id/eprint/38640
 db:crsp	CRSP US Stock Databases	CRSP	http://www.crsp.com/products/research-products/crsp-us-stock-databases#files		https://mpra.ub.uni-muenchen.de/id/eprint/14235 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924
 db:compustat	Compustat	Compustat	http://www.spcapitaliq.com/our-capabilities/our-capabilities.html?product=compustat-research-insight		https://mpra.ub.uni-muenchen.de/id/eprint/14235 ; https://mpra.ub.uni-muenchen.de/id/eprint/51568
@@ -27,3 +27,5 @@ db:weo	IMF World Economic Outlook	WEO	http://www.imf.org/external/ns/cs.aspx?id=
 db:ifs	IMF International Financial Statistics	IFS	http://data.imf.org/?sk=5DABAFF2-C5AD-4D27-A175-1253419C02D1		http://dx.doi.org/10.5089/9781455254323.001
 db:fdi	UNCTAD Foreign Direct Investment	FDI	http://unctadstat.unctad.org/wds		http://dx.doi.org/10.5089/9781455254323.001
 db:gfdd	Global Financial Development	GFDD	http://data.worldbank.org/data-catalog/global-financial-development		
+db:fred	St. Louis FED FRED	FRED ; St. Louis FED	https://fred.stlouisfed.org/		http://dx.doi.org/10.1016/j.econmod.2015.08.021
+db:sp100	S&P 100	S&P 100	http://us.spindices.com/indices/equity/sp-100		
