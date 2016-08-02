@@ -6,6 +6,7 @@ import sys
 import re
 import glob
 import os.path
+import xml.etree.ElementTree as ET
 
 TSV_HEADER = {
     "ID": 0,
@@ -13,6 +14,9 @@ TSV_HEADER = {
     'URL': 3,
     "KEYWORDS": 2
 }
+
+def oai_to_entity():
+    pass
 
 def apply(dbfile, textdir, metadir, outdbfile):
     with open(dbfile) as jsoninfile:
