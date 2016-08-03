@@ -1,0 +1,357 @@
+{
+  "infolisPattern": {
+    "dbpat-eu-klems": {
+      "regexPattern": "EU KLEMS", 
+      "linkTo": "db:euklems"
+    }, 
+    "dbpat-osiris": {
+      "regexPattern": "Osiris", 
+      "linkTo": "db:osiris"
+    }, 
+    "dbpat-fdi": {
+      "regexPattern": "FDI", 
+      "linkTo": "db:fdi"
+    }, 
+    "dbpat-thomson-reuters-worldscope": {
+      "regexPattern": "Thomson Reuters WorldScope", 
+      "linkTo": "db:worldscope"
+    }, 
+    "dbpat-oecd-eo": {
+      "regexPattern": "OECD-EO", 
+      "linkTo": "db:oecdeo"
+    }, 
+    "dbpat-nyse": {
+      "regexPattern": "NYSE", 
+      "linkTo": "db:nyse"
+    }, 
+    "dbpat-compustat": {
+      "regexPattern": "Compustat", 
+      "linkTo": "db:compustat"
+    }, 
+    "dbpat-new-york-stack-exchange": {
+      "regexPattern": "New York Stack Exchange", 
+      "linkTo": "db:nyse"
+    }, 
+    "dbpat-wiod": {
+      "regexPattern": "WIOD", 
+      "linkTo": "db:wiod"
+    }, 
+    "dbpat-trains": {
+      "regexPattern": "TRAINS", 
+      "linkTo": "db:trains"
+    }, 
+    "dbpat-amadeus": {
+      "regexPattern": "Amadeus", 
+      "linkTo": "db:amadeus"
+    }, 
+    "dbpat-nasdaq": {
+      "regexPattern": "NASDAQ", 
+      "linkTo": "db:nasdaq"
+    }, 
+    "dbpat-fred": {
+      "regexPattern": "FRED", 
+      "linkTo": "db:fred"
+    }, 
+    "dbpat-cepii-geodist": {
+      "regexPattern": "CEPII GeoDist", 
+      "linkTo": "db:cepiigeodist"
+    }, 
+    "dbpat-eurostat-lfs": {
+      "regexPattern": "Eurostat LFS", 
+      "linkTo": "db:eulfs"
+    }, 
+    "dbpat-st--louis-fed-fred": {
+      "regexPattern": "St. Louis FED FRED", 
+      "linkTo": "db:fred"
+    }, 
+    "dbpat-deutscher-aktienindex-dax": {
+      "regexPattern": "Deutscher Aktienindex DAX", 
+      "linkTo": "db:dax30"
+    }, 
+    "dbpat-unctad-foreign-direct-investment": {
+      "regexPattern": "UNCTAD Foreign Direct Investment", 
+      "linkTo": "db:fdi"
+    }, 
+    "dbpat-world-federation-of-exchanges": {
+      "regexPattern": "World Federation of Exchanges", 
+      "linkTo": "db:wfe"
+    }, 
+    "dbpat-crsp": {
+      "regexPattern": "CRSP", 
+      "linkTo": "db:crsp"
+    }, 
+    "dbpat-ameco": {
+      "regexPattern": "AMECO", 
+      "linkTo": "db:ameco"
+    }, 
+    "dbpat-oecd-stat": {
+      "regexPattern": "OECD.Stat", 
+      "linkTo": "db:oecd"
+    }, 
+    "dbpat-kurzform": {
+      "regexPattern": "Kurzform", 
+      "linkTo": "Identifier"
+    }, 
+    "dbpat-imf-world-economic-outlook": {
+      "regexPattern": "IMF World Economic Outlook", 
+      "linkTo": "db:weo"
+    }, 
+    "dbpat-wdi": {
+      "regexPattern": "WDI", 
+      "linkTo": "db:wdi"
+    }, 
+    "dbpat-world-bank-unctad---trade-analysis-and-information-system--trains-": {
+      "regexPattern": "World Bank UNCTAD - Trade Analysis and Information System (TRAINS)", 
+      "linkTo": "db:trains"
+    }, 
+    "dbpat-bvd-osiris": {
+      "regexPattern": "BvD Osiris", 
+      "linkTo": "db:osiris"
+    }, 
+    "dbpat-crsp-us-stock-databases": {
+      "regexPattern": "CRSP US Stock Databases", 
+      "linkTo": "db:crsp"
+    }, 
+    "dbpat-st--louis-fed": {
+      "regexPattern": "St. Louis FED", 
+      "linkTo": "db:fred"
+    }, 
+    "dbpat-geodist": {
+      "regexPattern": "GeoDist", 
+      "linkTo": "db:cepiigeodist"
+    }, 
+    "dbpat-bvd-amadeus": {
+      "regexPattern": "BvD Amadeus", 
+      "linkTo": "db:amadeus"
+    }, 
+    "dbpat-world-input-output-database": {
+      "regexPattern": "World Input Output Database", 
+      "linkTo": "db:wiod"
+    }, 
+    "dbpat-toyo-keizai-corporate-social-responsibility-database": {
+      "regexPattern": "Toyo Keizai Corporate Social Responsibility Database", 
+      "linkTo": "db:toyo_keizai"
+    }, 
+    "dbpat-s-p-100": {
+      "regexPattern": "S&P 100", 
+      "linkTo": "db:sp100"
+    }, 
+    "dbpat-imf-international-financial-statistics": {
+      "regexPattern": "IMF International Financial Statistics", 
+      "linkTo": "db:ifs"
+    }, 
+    "dbpat-euromonitor": {
+      "regexPattern": "EuroMonitor", 
+      "linkTo": "db:euromonitor"
+    }, 
+    "dbpat-worldscope": {
+      "regexPattern": "WorldScope", 
+      "linkTo": "db:worldscope"
+    }, 
+    "dbpat-tokyo-stock-price-index": {
+      "regexPattern": "Tokyo Stock Price Index", 
+      "linkTo": "db:topix"
+    }, 
+    "dbpat-maddison": {
+      "regexPattern": "Maddison", 
+      "linkTo": "db:maddison"
+    }, 
+    "dbpat-gfs": {
+      "regexPattern": "GFS", 
+      "linkTo": "db:gfs"
+    }, 
+    "dbpat-maddison-project-database": {
+      "regexPattern": "Maddison Project Database", 
+      "linkTo": "db:maddison"
+    }, 
+    "dbpat-weo": {
+      "regexPattern": "WEO", 
+      "linkTo": "db:weo"
+    }, 
+    "dbpat-gfdd": {
+      "regexPattern": "GFDD", 
+      "linkTo": "db:gfdd"
+    }, 
+    "dbpat-imf-government-finance-statistics": {
+      "regexPattern": "IMF Government Finance Statistics", 
+      "linkTo": "db:gfs"
+    }, 
+    "dbpat-global-financial-development": {
+      "regexPattern": "Global Financial Development", 
+      "linkTo": "db:gfdd"
+    }, 
+    "dbpat-annual-macro-economics-database-ameco": {
+      "regexPattern": "Annual macro-economics database AMECO", 
+      "linkTo": "db:ameco"
+    }, 
+    "dbpat-world-bank-wdi": {
+      "regexPattern": "World Bank WDI", 
+      "linkTo": "db:wdi"
+    }, 
+    "dbpat-titel": {
+      "regexPattern": "Titel", 
+      "linkTo": "Identifier"
+    }, 
+    "dbpat-oecd-economic-outlook": {
+      "regexPattern": "OECD Economic Outlook", 
+      "linkTo": "db:oecdeo"
+    }, 
+    "dbpat-ifs": {
+      "regexPattern": "IFS", 
+      "linkTo": "db:ifs"
+    }
+  }, 
+  "entityLink": {}, 
+  "entity": {
+    "db:oecd": {
+      "url": "https://data.oecd.org/", 
+      "identifier": "https://data.oecd.org/", 
+      "name": "OECD.Stat"
+    }, 
+    "db:gfdd": {
+      "url": "http://data.worldbank.org/data-catalog/global-financial-development", 
+      "identifier": "http://data.worldbank.org/data-catalog/global-financial-development", 
+      "name": "Global Financial Development"
+    }, 
+    "db:amadeus": {
+      "url": "http://www.bvdinfo.com/de-de/our-products/company-information/international-products/amadeus", 
+      "identifier": "http://www.bvdinfo.com/de-de/our-products/company-information/international-products/amadeus", 
+      "name": "BvD Amadeus"
+    }, 
+    "db:euromonitor": {
+      "url": "http://www.euromonitor.com/", 
+      "identifier": "http://www.euromonitor.com/", 
+      "name": "EuroMonitor"
+    }, 
+    "db:toyo_keizai": {
+      "url": "http://dbs.toyokeizai.net/en/", 
+      "identifier": "http://dbs.toyokeizai.net/en/", 
+      "name": "Toyo Keizai Corporate Social Responsibility Database"
+    }, 
+    "db:sp100": {
+      "url": "http://us.spindices.com/indices/equity/sp-100", 
+      "identifier": "http://us.spindices.com/indices/equity/sp-100", 
+      "name": "S&P 100"
+    }, 
+    "db:maddison": {
+      "url": "http://www.ggdc.net/maddison/maddison-project/home.htm", 
+      "identifier": "http://www.ggdc.net/maddison/maddison-project/home.htm", 
+      "name": "Maddison Project Database"
+    }, 
+    "db:oecdeo": {
+      "url": "https://data.oecd.org/", 
+      "identifier": "https://data.oecd.org/", 
+      "name": "OECD Economic Outlook"
+    }, 
+    "db:gfs": {
+      "url": "http://www.imf.org/en/Data", 
+      "identifier": "http://www.imf.org/en/Data", 
+      "name": "IMF Government Finance Statistics"
+    }, 
+    "db:worldscope": {
+      "url": "https://www.rimes.com/data/thomson-reuters-worldscope/", 
+      "identifier": "https://www.rimes.com/data/thomson-reuters-worldscope/", 
+      "name": "Thomson Reuters WorldScope"
+    }, 
+    "db:ifs": {
+      "url": "http://data.imf.org/?sk=5DABAFF2-C5AD-4D27-A175-1253419C02D1", 
+      "identifier": "http://data.imf.org/?sk=5DABAFF2-C5AD-4D27-A175-1253419C02D1", 
+      "name": "IMF International Financial Statistics"
+    }, 
+    "db:cepiigeodist": {
+      "url": "http://www.cepii.fr/cepii/en/bdd_modele/bdd.asp", 
+      "identifier": "http://www.cepii.fr/cepii/en/bdd_modele/bdd.asp", 
+      "name": "CEPII GeoDist"
+    }, 
+    "db:fdi": {
+      "url": "http://unctadstat.unctad.org/wds", 
+      "identifier": "http://unctadstat.unctad.org/wds", 
+      "name": "UNCTAD Foreign Direct Investment"
+    }, 
+    "db:wiod": {
+      "url": "http://www.wiod.org/new_site/home.htm", 
+      "identifier": "http://www.wiod.org/new_site/home.htm", 
+      "name": "World Input Output Database"
+    }, 
+    "db:wfe": {
+      "url": "http://www.world-exchanges.org/home/index.php/statistics/ipo-database", 
+      "identifier": "http://www.world-exchanges.org/home/index.php/statistics/ipo-database", 
+      "name": "World Federation of Exchanges"
+    }, 
+    "db:wdi": {
+      "url": "http://data.worldbank.org/data-catalog/world-development-indicators", 
+      "identifier": "http://data.worldbank.org/data-catalog/world-development-indicators", 
+      "name": "World Bank WDI"
+    }, 
+    "db:ameco": {
+      "url": "http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm", 
+      "identifier": "http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm", 
+      "name": "Annual macro-economics database AMECO"
+    }, 
+    "db:crsp": {
+      "url": "http://www.crsp.com/products/research-products/crsp-us-stock-databases#files", 
+      "identifier": "http://www.crsp.com/products/research-products/crsp-us-stock-databases#files", 
+      "name": "CRSP US Stock Databases"
+    }, 
+    "db:dax30": {
+      "url": "http://www.bloomberg.com/quote/DAX:IND", 
+      "identifier": "http://www.bloomberg.com/quote/DAX:IND", 
+      "name": "Deutscher Aktienindex DAX"
+    }, 
+    "db:osiris": {
+      "url": "http://www.bvdinfo.com/de-de/our-products/company-information/international-products/osiris", 
+      "identifier": "http://www.bvdinfo.com/de-de/our-products/company-information/international-products/osiris", 
+      "name": "BvD Osiris"
+    }, 
+    "db:topix": {
+      "url": "http://www.bloomberg.com/quote/TPX:IND", 
+      "identifier": "http://www.bloomberg.com/quote/TPX:IND", 
+      "name": "Tokyo Stock Price Index"
+    }, 
+    "db:compustat": {
+      "url": "http://www.spcapitaliq.com/our-capabilities/our-capabilities.html?product=compustat-research-insight", 
+      "identifier": "http://www.spcapitaliq.com/our-capabilities/our-capabilities.html?product=compustat-research-insight", 
+      "name": "Compustat"
+    }, 
+    "Identifier": {
+      "url": "URL", 
+      "identifier": "URL", 
+      "name": "Titel"
+    }, 
+    "db:trains": {
+      "url": "http://databank.worldbank.org/data/reports.aspx?source=UNCTAD-~-Trade-Analysis-Information-System-(TRAINS)", 
+      "identifier": "http://databank.worldbank.org/data/reports.aspx?source=UNCTAD-~-Trade-Analysis-Information-System-(TRAINS)", 
+      "name": "World Bank UNCTAD - Trade Analysis and Information System (TRAINS)"
+    }, 
+    "db:eulfs": {
+      "url": "http://ec.europa.eu/eurostat/web/lfs/data/main-tables", 
+      "identifier": "http://ec.europa.eu/eurostat/web/lfs/data/main-tables", 
+      "name": "Eurostat LFS"
+    }, 
+    "db:nyse": {
+      "url": "https://www.nyse.com/", 
+      "identifier": "https://www.nyse.com/", 
+      "name": "New York Stack Exchange"
+    }, 
+    "db:nasdaq": {
+      "url": "http://www.bloomberg.com/quote/NASDAQ:IND", 
+      "identifier": "http://www.bloomberg.com/quote/NASDAQ:IND", 
+      "name": "NASDAQ"
+    }, 
+    "db:euklems": {
+      "url": "http://www.euklems.net/", 
+      "identifier": "http://www.euklems.net/", 
+      "name": "EU KLEMS"
+    }, 
+    "db:weo": {
+      "url": "http://www.imf.org/external/ns/cs.aspx?id=28", 
+      "identifier": "http://www.imf.org/external/ns/cs.aspx?id=28", 
+      "name": "IMF World Economic Outlook"
+    }, 
+    "db:fred": {
+      "url": "https://fred.stlouisfed.org/", 
+      "identifier": "https://fred.stlouisfed.org/", 
+      "name": "St. Louis FED FRED"
+    }
+  }
+}

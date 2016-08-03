@@ -10,10 +10,12 @@ import os.path
 import xml.etree.ElementTree as ET
 from hashlib import md5
 import itertools
+import Queue
+import threading
 import logging
-logging.basicConfig(level=logging.DEBUG,
-        format='[%(levelname)s] %(asctime)s.%(msecs)03d - %(message)s',
-        datefmt='%H:%M')
+logging.basicConfig(level=logging.DEBUG, format='[%(levelname)s] %(threadName)-10s : %(message)s')
+#  logging.basicConfig(level=logging.DEBUG)
+logging.logThreads = 1
 
 COUNTER = itertools.count()
 
@@ -28,6 +30,8 @@ NS = {
     'dc': 'http://purl.org/dc/elements/1.1/',
     'oai': 'http://www.openarchives.org/OAI/2.0/'
 }
+MAX_THREADS = 5
+FILES_PER_THREAD = 1000
 ENTITY_CONFIDENCE = 0.97
 ENTITY_RELATIONS = ['uses_database']
 ENTITYT_LINKREASON = 'dbminer'
@@ -63,13 +67,10 @@ def make_entity_from_oai(metafile):
         logging.warn("(%s): %s" % (metafile, e))
     return entity
 
-def search_patterns_in_files(dbfile, textfiles, metadir):
+def search_patterns_in_files(q, dbfile, textfiles, cur, total, metadir):
     with open(dbfile) as jsoninfile:
         db = json.load(jsoninfile)
-        cur = 0
-        total = len(textfiles)
-        print("Total: %d files" % total)
-        for textfile in textfiles:
+        for textfile in textfiles[cur:total]:
             found = []
             metafile = metadir + "/" + os.path.splitext(os.path.basename(textfile))[0] + ".xml"
             entity = make_entity_from_oai(metafile)
@@ -89,16 +90,27 @@ def search_patterns_in_files(dbfile, textfiles, metadir):
                     }
             cur += 1
             if len(found) > 0:
-                logging.info("%-5d/%5d %s"%(cur, total, found))
+                logging.info("%-5d %s"%(cur, found))
             else:
-                logging.info("%-5d/%5d --"%(cur, total))
-    return db
+                logging.info("%-5d --"%(cur))
+    q.put(db)
 
 def search_patterns(dbfile, textdir, metadir, outdbfile):
-    textfiles = glob.glob(textdir + "/*.txt")
-    db = search_patterns_in_files(dbfile, textfiles, metadir)
-    with open(outdbfile, 'w') as jsonoutfile:
-        jsonoutfile.write(json.dumps(db, indent=2))
+    q = Queue.Queue()
+    textfiles = glob.glob(textdir + "/*.txt")[0:2000]
+    for x in range(0, len(textfiles), FILES_PER_THREAD):
+        t = threading.Thread(target=search_patterns_in_files, args=(q, dbfile,
+            textfiles, x, x+FILES_PER_THREAD, metadir))
+        t.start()
+        print(q)
+        if threading.active_count() >= MAX_THREADS:
+            q.wait()
+    q.wait()
+    print(q)
+    #  while threading.active_count() < MAX_THREADS
+    #  db = search_patterns_in_files(dbfile, textfiles, metadir)
+    #  with open(outdbfile, 'w') as jsonoutfile:
+        #  jsonoutfile.write(json.dumps(db, indent=2))
 
 def tsv_to_json(infile, outfile):
     db = { "entity": {}, "infolisPattern": {}, 'entityLink': {} }

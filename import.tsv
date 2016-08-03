@@ -5,15 +5,14 @@ db:toyo_keizai	Toyo Keizai Corporate Social Responsibility Database		http://dbs.
 db:topix	Tokyo Stock Price Index		http://www.bloomberg.com/quote/TPX:IND	mittel	http://doi.org/10.1080/07474938.2014.977086
 db:dax30	Deutscher Aktienindex DAX		http://www.bloomberg.com/quote/DAX:IND	hoch	http://doi.org/10.1016/j.eswa.2015.04.056
 db:nasdaq	NASDAQ		http://www.bloomberg.com/quote/NASDAQ:IND		http://doi.org/10.1016/j.eswa.2015.04.056 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924
-db:amadeus	BvD Amadeus		http://www.bvdinfo.com/de-de/our-products/company-information/international-products/amadeus		https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; https://mpra.ub.uni-muenchen.de/id/eprint/33602
+db:amadeus	BvD Amadeus	Amadeus	http://www.bvdinfo.com/de-de/our-products/company-information/international-products/amadeus		https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; https://mpra.ub.uni-muenchen.de/id/eprint/33602
 db:wdi	World Bank WDI	WDI	http://data.worldbank.org/data-catalog/world-development-indicators		https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; http://dx.doi.org/10.5089/9781455254323.001
-db:wb	World Bank		http://data.worldbank.org/		https://mpra.ub.uni-muenchen.de/id/eprint/28485
 db:cepiigeodist	CEPII GeoDist	GeoDist	http://www.cepii.fr/cepii/en/bdd_modele/bdd.asp		https://mpra.ub.uni-muenchen.de/id/eprint/25631
 db:trains	World Bank UNCTAD - Trade Analysis and Information System (TRAINS)	TRAINS	http://databank.worldbank.org/data/reports.aspx?source=UNCTAD-~-Trade-Analysis-Information-System-(TRAINS)		https://mpra.ub.uni-muenchen.de/id/eprint/28485
 db:wfe	World Federation of Exchanges		http://www.world-exchanges.org/home/index.php/statistics/ipo-database		https://mpra.ub.uni-muenchen.de/id/eprint/20085
 db:euklems	EU KLEMS	EU KLEMS	http://www.euklems.net/		https://mpra.ub.uni-muenchen.de/id/eprint/37965
-db:maddison	Maddison Project Database		http://www.ggdc.net/maddison/maddison-project/home.htm		https://mpra.ub.uni-muenchen.de/id/eprint/71488
-db:oecd	OECD.Stat		https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/34343
+db:maddison	Maddison Project Database	Maddison	http://www.ggdc.net/maddison/maddison-project/home.htm		https://mpra.ub.uni-muenchen.de/id/eprint/71488
+db:oecd	OECD.Stat	OECD.Stat	https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/34343
 db:oecdeo	OECD Economic Outlook	OECD-EO	https://data.oecd.org/		https://mpra.ub.uni-muenchen.de/id/eprint/31727 ; https://mpra.ub.uni-muenchen.de/id/eprint/15841 ; http://dx.doi.org/10.1111/jofi.12206
 db:worldscope	Thomson Reuters WorldScope	WorldScope	https://www.rimes.com/data/thomson-reuters-worldscope/		https://mpra.ub.uni-muenchen.de/id/eprint/35221 ; https://mpra.ub.uni-muenchen.de/id/eprint/6040 ; https://mpra.ub.uni-muenchen.de/id/eprint/38640
 db:crsp	CRSP US Stock Databases	CRSP	http://www.crsp.com/products/research-products/crsp-us-stock-databases#files		https://mpra.ub.uni-muenchen.de/id/eprint/14235 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924
