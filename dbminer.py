@@ -23,7 +23,10 @@ logging.basicConfig(level=logging.DEBUG,
 
 COUNTER = itertools.count()
 
-TSV_HEADER = { "ID": 0, "TITLE": 1, "KEYWORDS": 2, 'URL': 3 }
+DATABASES_CSV_HEADER = { "ID": 0, "TITLE": 1, "KEYWORDS": 2, 'URL': 3 }
+
+ICPSRSTUDIES_CSV_HEADER = { "STUDY_NUMBER": 0, "OWNER": 1, "TITLE": 2,
+    "INVESTIGATORS": 3, "DOI": 4, "TIME_PERIOD": 5 }
 
 NS = {
     'dc': 'http://purl.org/dc/elements/1.1/',
@@ -147,24 +150,41 @@ def jsonify_databases(infile, outfile):
     with io.open(infile, 'r', encoding='utf8') as csvfile:
         tsvreader = csv.reader(csvfile, delimiter='\t')
         for row in tsvreader:
-            db['entity'][row[TSV_HEADER['ID']]] = {
-                "url": row[TSV_HEADER['URL']],
-                "identifier": row[TSV_HEADER['URL']],
-                "name": row[TSV_HEADER['TITLE']]
+            db['entity'][row[DATABASES_CSV_HEADER['ID']]] = {
+                "url": row[DATABASES_CSV_HEADER['URL']],
+                "identifier": row[DATABASES_CSV_HEADER['URL']],
+                "name": row[DATABASES_CSV_HEADER['TITLE']]
             }
-            db['infolisPattern']['dbpat-' + urlescape(row[TSV_HEADER['TITLE']])] = {
-                'regexPattern': row[TSV_HEADER['TITLE']],
-                'linkTo': row[TSV_HEADER['ID']]
+            db['infolisPattern']['dbpat-' + urlescape(row[DATABASES_CSV_HEADER['TITLE']])] = {
+                'regexPattern': row[DATABASES_CSV_HEADER['TITLE']],
+                'linkTo': row[DATABASES_CSV_HEADER['ID']]
             }
-            for pat in row[TSV_HEADER['KEYWORDS']].split(" ; "):
+            for pat in row[DATABASES_CSV_HEADER['KEYWORDS']].split(" ; "):
                 if pat == '':
                     continue
                 db['infolisPattern']["dbpat-" + urlescape(pat)] = {
                     "regexPattern": pat,
-                    "linkTo": row[TSV_HEADER['ID']]
+                    "linkTo": row[DATABASES_CSV_HEADER['ID']]
                 }
         with open(outfile, mode="w") as jsonfile:
             jsonfile.write(json.dumps(db, indent=2))
+
+def jsonify_icpsr_studies(infile, outfile):
+    db = { "entity": {}, "infolisPattern": {} }
+    with open(infile, 'r') as csvfile:
+        csvreader = csv.reader(csvfile)
+        for row in csvreader:
+            _id = "icpsr_" + row[ICPSRSTUDIES_CSV_HEADER['STUDY_NUMBER']]
+            title = row[ICPSRSTUDIES_CSV_HEADER['TITLE']]
+            db['entity'][_id] = {
+                'name': title,
+                'identifier': row[ICPSRSTUDIES_CSV_HEADER['DOI']] }
+            db['infolisPattern']['icpsrpat-' + urlescape(title)] = {
+                'regexPattern': title,
+                'linkTo': _id}
+        with open(outfile, mode="w") as jsonfile:
+            jsonfile.write(json.dumps(db, indent=2))
+    pass
 
 def print_usage(exit_code):
     prog = sys.argv[0]
@@ -172,13 +192,14 @@ def print_usage(exit_code):
     print("""
     Commands:
 
-    jsonify-databases <tsv> <json>
-        Convert TSV file <tsv> to JSON file <json>
+    jsonify-databases <tsv> <out-json>
+        Convert Databases TSV <tsv> to JSON
 
-    jsonify-dara <solr-xml> <json>
-        Convert da-ra solr xml to JSON file <json>
+    jsonify-dara <solr-xml> <out-json>
+        Convert da-ra solr xml to JSON
 
-    jsonify-icpsr <
+    jsonify-icpsr-studies <csv> <out-json>
+        Convert ICPSR studies CSV to JSON
 
     merge-dbs <outjson> <in1> <in2...>
         Merges JSON files to be uploaded or used for search
@@ -205,6 +226,10 @@ if __name__ == "__main__":
         if len(sys.argv) != 4:
             print_usage(1)
         jsonify_dara(sys.argv[2], sys.argv[3])
+    elif cmd == 'jsonify-icpsr-studies':
+        if len(sys.argv) != 4:
+            print_usage(1)
+        jsonify_icpsr_studies(sys.argv[2], sys.argv[3])
     elif cmd == 'search-patterns':
         if len(sys.argv) != 6:
             print_usage(1)
