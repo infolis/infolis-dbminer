@@ -7,22 +7,23 @@ import sys
 import re
 import glob
 import os.path
-import xml.etree.ElementTree as ET
+import xml.etree.cElementTree as ET
 from hashlib import md5
 import itertools
 import logging
+import resource
+
+#-----------------------------------------------------------------------------
+# Configuration{{{
+#
+
 logging.basicConfig(level=logging.DEBUG,
         format='[%(levelname)s] %(asctime)s.%(msecs)03d - %(message)s',
         datefmt='%H:%M')
 
 COUNTER = itertools.count()
 
-TSV_HEADER = {
-    "ID": 0,
-    "TITLE": 1,
-    'URL': 3,
-    "KEYWORDS": 2
-}
+TSV_HEADER = { "ID": 0, "TITLE": 1, "KEYWORDS": 2, 'URL': 3 }
 
 NS = {
     'dc': 'http://purl.org/dc/elements/1.1/',
@@ -32,10 +33,17 @@ ENTITY_CONFIDENCE = 0.97
 ENTITY_RELATIONS = ['uses_database']
 ENTITYT_LINKREASON = 'dbminer'
 
+#
+# }}}
+#-----------------------------------------------------------------------------
+
 xmlnode_text = lambda (x) : x.text
 urlescape = lambda (x) : re.sub("[^a-zA-Z0-9]", "-", x).lower()
 
 def make_infolis_file_from_textfile(textfile, entity):
+    """
+    Create an InfolisFile from a text file and the entity it manifests
+    """
     infolis_file = {}
     infolis_file['_id'] = 'file_' + str(COUNTER.next())
     infolis_file['fileStatus'] = 'AVAILABLE'
@@ -49,6 +57,9 @@ def make_infolis_file_from_textfile(textfile, entity):
     return infolis_file, textcontents
 
 def make_entity_from_oai(metafile):
+    """
+    Parse an entity from an OAI-PMH Dublin Core XML file
+    """
     root = ET.parse(metafile)
     entity = {}
     entity['_id'] = 'entity_' + str(COUNTER.next())
@@ -100,7 +111,38 @@ def search_patterns(dbfile, textdir, metadir, outdbfile):
     with open(outdbfile, 'w') as jsonoutfile:
         jsonoutfile.write(json.dumps(db, indent=2))
 
-def tsv_to_json(infile, outfile):
+def jsonify_dara(darafile, outdbfile):
+    context = ET.iterparse(darafile, events=('end',))
+    db = { "entity": {} }
+    cur = 0
+    for action, elem in context:
+        if elem.tag=='doc':
+            _id = elem.find(".//str[@name='id']").text
+            entity = {}
+            entity['identifier'] = "http://www.da-ra.de/dara/search/search_show?res_id=%s&lang=en&detail=true"%(_id)
+            entity['name'] = elem.findtext(".//arr[@name='title']/str")
+            if 'Rezension' in entity['name']:
+                logging.warn("Skip this, not a dataset: %s" % entity['name'])
+                continue
+            entity['subjects'] = map(xmlnode_text, elem.findall(".//arr[@name='subject']/str"))
+            entity['authors'] = map(xmlnode_text, elem.findall(".//arr[@name='person']/str"))
+            try:
+                entity['language'] = elem.findtext(".//arr[@name='studyLanguage_txt']/str")
+            except AttributeError, e:
+                logging.warn("has no studyLanguage_txt: %s", entity['identifier'])
+                entity['language'] = 'eng'
+            db['entity'][_id] = entity
+            #  print resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            cur += 1
+            sys.stderr.write("\r<doc> #%6d" % cur)
+            elem.clear()
+    with open(outdbfile, 'w') as jsonoutfile:
+        jsonoutfile.write(json.dumps(db, indent=2))
+
+def jsonify_databases(infile, outfile):
+    """
+    Transform the Google Docs Table TSV to a json-import-able structure
+    """
     db = { "entity": {}, "infolisPattern": {}, 'entityLink': {} }
     with io.open(infile, 'r', encoding='utf8') as csvfile:
         tsvreader = csv.reader(csvfile, delimiter='\t')
@@ -130,8 +172,16 @@ def print_usage(exit_code):
     print("""
     Commands:
 
-    tsv-to-json <tsv> <json>
+    jsonify-databases <tsv> <json>
         Convert TSV file <tsv> to JSON file <json>
+
+    jsonify-dara <solr-xml> <json>
+        Convert da-ra solr xml to JSON file <json>
+
+    jsonify-icpsr <
+
+    merge-dbs <outjson> <in1> <in2...>
+        Merges JSON files to be uploaded or used for search
 
     search-patterns <db> <textdir> <metadir> <outdb>
         Run all the patterns from <db> on the files in <textdir>
@@ -147,10 +197,14 @@ if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] == '-h' or sys.argv[1] == '--help':
         print_usage(0)
     cmd = sys.argv[1]
-    if cmd == 'tsv-to-json':
+    if cmd == 'jsonify-databases':
         if len(sys.argv) != 4:
             print_usage(1)
-        tsv_to_json(sys.argv[2], sys.argv[3])
+        jsonify_databases(sys.argv[2], sys.argv[3])
+    elif cmd == 'jsonify-dara':
+        if len(sys.argv) != 4:
+            print_usage(1)
+        jsonify_dara(sys.argv[2], sys.argv[3])
     elif cmd == 'search-patterns':
         if len(sys.argv) != 6:
             print_usage(1)
