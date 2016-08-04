@@ -150,24 +150,46 @@ def jsonify_databases(infile, outfile):
     with io.open(infile, 'r', encoding='utf8') as csvfile:
         tsvreader = csv.reader(csvfile, delimiter='\t')
         for row in tsvreader:
-            db['entity'][row[DATABASES_CSV_HEADER['ID']]] = {
-                "url": row[DATABASES_CSV_HEADER['URL']],
-                "identifier": row[DATABASES_CSV_HEADER['URL']],
-                "name": row[DATABASES_CSV_HEADER['TITLE']]
+            _id = row[DATABASES_CSV_HEADER['ID']]
+            title = row[DATABASES_CSV_HEADER['TITLE']]
+            url = row[DATABASES_CSV_HEADER['URL']]
+            keywords = row[DATABASES_CSV_HEADER['KEYWORDS']].split(" ; ")
+            db['entity'][_id] = {
+                "url": url,
+                "identifier": url,
+                "name": title
             }
-            db['infolisPattern']['dbpat-' + urlescape(row[DATABASES_CSV_HEADER['TITLE']])] = {
-                'regexPattern': row[DATABASES_CSV_HEADER['TITLE']],
-                'linkTo': row[DATABASES_CSV_HEADER['ID']]
-            }
-            for pat in row[DATABASES_CSV_HEADER['KEYWORDS']].split(" ; "):
-                if pat == '':
-                    continue
-                db['infolisPattern']["dbpat-" + urlescape(pat)] = {
-                    "regexPattern": pat,
-                    "linkTo": row[DATABASES_CSV_HEADER['ID']]
-                }
+            add_pattern_to_db(dbm, 'dbpat', title, _id)
+            for pat in keywords:
+                if pat != '':
+                    add_pattern_to_db(dbm, 'dbpat', pat, _id)
         with open(outfile, mode="w") as jsonfile:
             jsonfile.write(json.dumps(db, indent=2))
+
+def add_pattern_to_db(db, prefix, title, _id):
+    """
+    Adds to the 'infolisPattern' section of `db` a new entry or augments an
+    existing entry for prefix with patterns for the title whose confidences
+    are inverse to the number of matching patterns.
+
+    Links to '_id'
+
+    First pattern: Full string, confidence 1
+    Second pattern: String up to first comma
+    """
+    # --------------------------
+    # first pattern: Whole title
+    db['infolisPattern'][prefix + '-' + urlescape(title)] = {
+        'regexPattern': title,
+        'linkTo': [_id]
+    }
+    secondform = re.sub(",.*", "", title)
+    if secondform != title:
+        key = prefix + '-' + urlescape(secondform)
+        if key not in db['infolisPattern']:
+            db['infolisPattern'][key] = { 'regexPattern': secondform, linkTo: [] }
+        db['infolisPattern']['linkTo'] += _id
+    return db
 
 def jsonify_icpsr_studies(infile, outfile):
     db = { "entity": {}, "infolisPattern": {} }
@@ -176,12 +198,12 @@ def jsonify_icpsr_studies(infile, outfile):
         for row in csvreader:
             _id = "icpsr_" + row[ICPSRSTUDIES_CSV_HEADER['STUDY_NUMBER']]
             title = row[ICPSRSTUDIES_CSV_HEADER['TITLE']]
+            doi = row[ICPSRSTUDIES_CSV_HEADER['DOI']]
             db['entity'][_id] = {
                 'name': title,
-                'identifier': row[ICPSRSTUDIES_CSV_HEADER['DOI']] }
-            db['infolisPattern']['icpsrpat-' + urlescape(title)] = {
-                'regexPattern': title,
-                'linkTo': _id}
+                'identifier': doi }
+            add_pattern_to_db(db, 'icpsrpat', title, _id)
+            add_pattern_to_db(db, 'icpsrpat', doi, _id)
         with open(outfile, mode="w") as jsonfile:
             jsonfile.write(json.dumps(db, indent=2))
     pass
