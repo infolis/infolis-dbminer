@@ -2,6 +2,8 @@
 logs
 *.log
 
-import/*
+import/*.json
+import/dara-solr*
+import/icpsr*
 test-data/solr-indent.xml
 datasets/

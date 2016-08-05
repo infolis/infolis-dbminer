@@ -1,0 +1,98 @@
+Identifier,Titel,Kurzform,URL,Precision,Beispiele
+db:nyse,New York Stack Exchange,NYSE,https://www.nyse.com/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/30078 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; http://dx.doi.org/10.1093/rof/rfu052 ; http://dx.doi.org/10.1093/rfs/hhu092 ; http://dx.doi.org/10.1093/rof/rft055
+db:eulfs,Eurostat LFS,Eurostat LFS,http://ec.europa.eu/eurostat/web/lfs/data/main-tables,hoch,http://doi.org/10.17877/DE290R-1856
+db:toyo_keizai,Toyo Keizai Corporate Social Responsibility Database,Toyo Keizai,http://dbs.toyokeizai.net/en/,hoch,http://doi.org/10.1080/07474938.2014.977086 ; https://mpra.ub.uni-muenchen.de/id/eprint/27721
+db:topix,Tokyo Stock Price Index,TOPIX,http://www.bloomberg.com/quote/TPX:IND,hoch,http://doi.org/10.1080/07474938.2014.977086
+db:dax30,Deutscher Aktienindex DAX,DAX,http://www.bloomberg.com/quote/DAX:IND,hoch,http://doi.org/10.1016/j.eswa.2015.04.056
+db:nasdaq,NASDAQ,Nasdaq,http://www.bloomberg.com/quote/NASDAQ:IND,hoch,http://doi.org/10.1016/j.eswa.2015.04.056 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; http://dx.doi.org/10.1093/rof/rfu052 ; http://dx.doi.org/10.1093/rfs/hhu092 ; http://dx.doi.org/10.1093/rof/rft055
+db:amadeus,BvD Amadeus,Amadeus,http://www.bvdinfo.com/de-de/our-products/company-information/international-products/amadeus,mittel,https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; https://mpra.ub.uni-muenchen.de/id/eprint/33602
+db:wdi,World Bank WDI,WDI,http://data.worldbank.org/data-catalog/world-development-indicators,mittel,https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; http://dx.doi.org/10.5089/9781455254323.001 ; http://www.jstor.org/stable/40985792
+db:worldbank,World Bank Open Data,,http://data.worldbank.org/,gering,https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; http://dx.doi.org/10.1016/j.jimonfin.2015.06.001 ; http://dx.doi.org/10.1016/j.jbankfin.2013.02.004
+db:geodist,CEPII GeoDist,GeoDist,http://www.cepii.fr/cepii/en/bdd_modele/bdd.asp,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/25631
+db:trains,World Bank UNCTAD - Trade Analysis and Information System (TRAINS),TRAINS,http://databank.worldbank.org/data/reports.aspx?source=UNCTAD-~-Trade-Analysis-Information-System-(TRAINS),gering,https://mpra.ub.uni-muenchen.de/id/eprint/28485 ; http://dx.doi.org/10.1016/j.regsciurbeco.2012.07.011
+db:wfe,World Federation of Exchanges,WFE,http://www.world-exchanges.org/home/index.php/statistics/ipo-database,gering,https://mpra.ub.uni-muenchen.de/id/eprint/20085
+db:euklems,EU KLEMS,EU KLEMS,http://www.euklems.net/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/37965
+db:maddison,Maddison Project Database,Maddison,http://www.ggdc.net/maddison/maddison-project/home.htm,gering,https://mpra.ub.uni-muenchen.de/id/eprint/71488
+db:oecd,OECD.Stat,OECD.Stat,http://stats.oecd.org/,,https://mpra.ub.uni-muenchen.de/id/eprint/34343 ; http://dx.doi.org/10.1111/j.1467-9396.2010.00937.x ; https://mpra.ub.uni-muenchen.de/id/eprint/56650
+db:oecdeo,OECD Economic Outlook,OECD-EO,https://data.oecd.org/,,https://mpra.ub.uni-muenchen.de/id/eprint/31727 ; https://mpra.ub.uni-muenchen.de/id/eprint/15841 ; http://dx.doi.org/10.1111/jofi.12206 ; http://dx.doi.org/10.1016/j.jimonfin.2015.06.001
+db:worldscope,Thomson Reuters WorldScope,WorldScope,https://www.rimes.com/data/thomson-reuters-worldscope/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/35221 ; https://mpra.ub.uni-muenchen.de/id/eprint/6040 ; https://mpra.ub.uni-muenchen.de/id/eprint/38640 ; http://dx.doi.org/10.1093/rfs/hhu092
+db:crsp,CRSP US Stock Databases,CRSP,http://www.crsp.com/products/research-products/crsp-us-stock-databases#files,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/14235 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; https://mpra.ub.uni-muenchen.de/id/eprint/25924 ; http:dx.doi.org/10.1093/rfs/hhu094 ; http://dx.doi.org/10.1093/rfs/hhu092 ; http://dx.doi.org/10.1093/rof/rft055
+db:compustat,Compustat,Compustat,http://www.spcapitaliq.com/our-capabilities/our-capabilities.html?product=compustat-research-insight,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/14235 ; https://mpra.ub.uni-muenchen.de/id/eprint/51568 ; http://dx.doi.org/10.1093/rfs/hhu145 ; http://dx.doi.org/10.1093/rof/rft055
+db:wiod,World Input Output Database,WIOD,http://www.wiod.org/new_site/home.htm,,https://mpra.ub.uni-muenchen.de/id/eprint/59125
+db:ameco,Annual macro-economics database AMECO,AMECO,http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/25705 ; http://dx.doi.org/10.1016/j.jimonfin.2015.06.001
+db:gfs,IMF Government Finance Statistics,GFS,http://www.imf.org/en/Data,,https://mpra.ub.uni-muenchen.de/id/eprint/15841
+db:osiris,BvD Osiris,Osiris,http://www.bvdinfo.com/de-de/our-products/company-information/international-products/osiris,,https://mpra.ub.uni-muenchen.de/id/eprint/4755
+db:euromonitor,EuroMonitor,EuroMonitor,http://www.euromonitor.com/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/3516
+db:weo,IMF World Economic Outlook,WEO,http://www.imf.org/external/ns/cs.aspx?id=28,,http://dx.doi.org/10.5089/9781455254323.001
+db:ifs,IMF International Financial Statistics,IFS,http://data.imf.org/?sk=5DABAFF2-C5AD-4D27-A175-1253419C02D1,,http://dx.doi.org/10.5089/9781455254323.001 ; http://dx.doi.org/10.1016/j.iref.2014.09.008 ; http://dx.doi.org/10.1111/j.1467-9396.2010.00937.x ; http://dx.doi.org/10.1016/j.econmod.2011.07.006 ; http://www.jstor.org/stable/40985792
+db:fdi,UNCTAD Foreign Direct Investment,FDI database,http://unctadstat.unctad.org/wds,,http://dx.doi.org/10.5089/9781455254323.001
+db:gfdd,Global Financial Development Database,GFDD,http://data.worldbank.org/data-catalog/global-financial-development,,
+db:fred,St. Louis FED FRED,FRED ; St. Louis FED,https://fred.stlouisfed.org/,,http://dx.doi.org/10.1016/j.econmod.2015.08.021 ; https://mpra.ub.uni-muenchen.de/id/eprint/56650
+db:sp100,S&P 100,S&P100,http://us.spindices.com/indices/equity/sp-100,hoch,
+db:factset,FactSet,FactSet,http://www.factset.com/data,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/71353
+db:msci,MSCI Indexes,MSCI,https://www.msci.com/indexes,,https://dx.doi.org/10.1016/j.econmod.2015.04.010 ; http://dx.doi.org/10.1016/j.econmod.2011.07.006
+db:erd,European Regional Database,ERD,http://www.eui.eu/Research/Library/ResearchGuides/Economics/Statistics/DataPortal/ERD.aspx,,https://dx.doi.org/10.1093/jeg/lbu055
+db:hmda,Home Mortgage Disclosure Act (HMDA) Database,HMDA,https://www.ffiec.gov/hmda/,,http://dx.doi.org/10.1016/j.jfineco.2014.09.009 
+db:fisd,Mergend Fixed Income Securities Database (FISD),FISD,http://www.mergent.com/mergent-solutions/fixed-income-data,,http://dx.doi.org/10.1093/rfs/hhu094
+db:trace,FINRA TRACE,TRACE,http://www.finra.org/industry/trace,mittel,http://dx.doi.org/10.1093/rfs/hhu094
+db:comtrade,UN Comtrade Database,Comtrade,http://comtrade.un.org/,hoch,http://dx.doi.org/10.1093/rfs/hhu094
+db:bitsel,BITSel Index,BITSel,http://www.cuhk.edu.hk/law/proj/BITSel/,hoch,http://dx.doi.org/10.1093/jiel/jgv008
+db:sdw,ECB Statistical Data Warehouse,SDW,http://sdw.ecb.europa.eu/,mittel,http://dx.doi.org/10.1016/j.qref.2014.07.001
+db:datastream,Thomson Reuters DataStream,DataStream,http://financial.thomsonreuters.com/en/products/tools-applications/trading-investment-tools/datastream-macroeconomic-analysis.html?gclid=CjwKEAjwiYG9BRCkgK-G45S323oSJABnykKAUL68DtC_YFAtfCNzstK8WBFatJAOM_9GT9xOifQjchoCfJTw_wcB&gclsrc=aw.ds.ds,hoch,http://dx.doi.org/10.1016/j.iref.2014.09.008 ; http://dx.doi.org/10.1016/j.econmod.2011.07.006 ; http://dx.doi.org/10.1093/rfs/hhu092 : https://mpra.ub.uni-muenchen.de/id/eprint/4296
+db:adb,Asian Development Bank Databases,ADB,http://www.adb.org/data/statistics,,http://dx.doi.org/10.1355/ae28-2h
+db:amex,Amex,Amex,http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=AMEX,,http://dx.doi.org/10.1093/rof/rfu052
+db:taq,NYSE Trade and Quote,TAQ,http://www.nyxdata.com/Data-Products/Daily-TAQ,mittel,http://dx.doi.org/10.1093/rfs/hhu094 ; http://dx.doi.org/10.1093/rof/rft055
+db:sp500,Standard and Poor's 500,S&P500,http://us.spindices.com/indices/equity/sp-500,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/11292
+db:13f,Thomson Reuters Institutional Holdings (13F) Database,13F,http://financial.thomsonreuters.com/en/products/data-analytics/company-data/company-analysis.html,gering,http://dx.doi.org/10.1093/rfs/hhu145
+db:sdcplatinum,Thomson Reuters SDC Platinum,SDC Platinum,http://financial.thomsonreuters.com/en/products/data-analytics/market-data/sdc-platinum-financial-securities.html,,http://dx.doi.org/10.1093/rfs/hhu145
+db:iss,Insitutional Shareholder Services Inc. (ISS) (Formerly RiskMetrics),RiskMetrics,http://www.whartonwrds.com/datasets/iss/,mittel,http://dx.doi.org/10.1093/rfs/hhu145
+db:ibes,Thomson Reuters I/B/E/S Estimates,IBES,http://financial.thomsonreuters.com/en/products/data-analytics/company-data/ibes-estimates.html,,http://dx.doi.org/10.1093/rfs/hhu092 ; http://dx.doi.org/10.1093/rof/rft055 ; http://dx.doi.org/10.1093/rof/rft055
+db:lionshare,CCE LionShare,LionShare,www.careereducation.columbia.edu/LionSHARE,mittel,http://dx.doi.org/10.1093/rfs/hhu092
+db:nyfed,Bank of New York,Bank of New York,https://www.newyorkfed.org/data-and-statistics/index.html,mittel,http://dx.doi.org/10.1093/rfs/hhu092
+db:mutualfunds,Thomson Reuters Mutual Fund Holdings Database,Mutual Funds,http://funds.us.reuters.com/US/overview.asp,,http://dx.doi.org/10.1093/rof/rft055
+db:tse,Taiwan Stock Exchange,TSE ; TWSE,http://www.twse.com.tw/en/,,http://dx.doi.org/10.1093/rof/rft055
+db:mms,International Money Market Survey Real-Time Database,MMS,https://sdw.ecb.europa.eu/browse.do?node=4212924,gering,http://dx.doi.org/10.1093/rof/rft055
+db:ftse100,FTSE 100 Index (UKX),FTSE,http://www.bloomberg.com/quote/UKX:IND,,http://dx.doi.org/10.1080/17446540701367451 ; https://mpra.ub.uni-muenchen.de/id/eprint/11292
+db:sensex,BSE SENSEX,SENSEX,http://www.bloomberg.com/quote/SENSEX:IND,,https://mpra.ub.uni-muenchen.de/id/eprint/21290 ; https://mpra.ub.uni-muenchen.de/id/eprint/34737
+db:shshazr,Shenzen A-Share,Shenzen,http://www.bloomberg.com/quote/SZASHR:IND,,
+db:csmar,China Stock Market Accounting Research,CSMAR,http://csmar.gtadata.com/,,https://mpra.ub.uni-muenchen.de/id/eprint/35221 ; https://mpra.ub.uni-muenchen.de/id/eprint/58620 ; https://mpra.ub.uni-muenchen.de/id/eprint/31887
+db:yahoofinance,Yahoo Finance,Yahoo Finance,https://in.finance.yahoo.com,mittel,https://mpra.ub.uni-muenchen.de/id/eprint/24913
+db:bist100,Borsa Istanbul 100 Index,BIST100,http://www.bloomberg.com/quote/XU100:IND,,
+db:gfd,Global Financial Data,GFD,https://www.globalfinancialdata.com,gering,https://ub-madoc.bib.uni-mannheim.de/39024
+db:csi100,CSI 100 Index,CSI100,http://www.bloomberg.com/quote/SHCSI100:IND,,
+db:nikkei225,Nikkei Index,Nikkei,http://indexes.nikkei.co.jp/en/nkave/index/profile?idx=nk225,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/11292
+db:eiamonthly,Monthly Energy Review,,http://www.eia.gov/totalenergy/data/monthly/,,
+db:eiasteo,Short-term Energy Outlook,,http://www.eia.gov/forecasts/steo/,,
+db:aim,Alternative Investment Markets,AIM,http://www.londonstockexchange.com/companies-and-advisors/aim/aim/aim.htm,mittel,http://dx.doi.org/10.1080/17446540701367451 
+db:kse100,KSE 100 Index,KSE100,http://www.bloomberg.com/quote/KSE100:IND,,https://mpra.ub.uni-muenchen.de/id/eprint/34737
+db:nepse,Nepal Stock Exchange,NEPSE,http://www.nepalstock.com/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/34737
+db:ssecomp,Shanghai Stock Exchange Composite Index,SSE Composite ; SHCOMP,http://www.bloomberg.com/quote/SHCOMP:IND,,https://mpra.ub.uni-muenchen.de/id/eprint/34737
+db:asi,Asset Substitution Index,ASI,,,
+db:eurostoxx50,Eurostoxx 50,Eurostoxx ; Eurostoxx 50,http://www.bloomberg.com/quote/SX5E:IND,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/11292
+db:djia,Dow Jones Industrial Average,DJIA ; INDU,http://www.bloomberg.com/quote/INDU:IND,,https://mpra.ub.uni-muenchen.de/id/eprint/11292
+db:iseq,Irish Stock Exchange Overall Index,ISEQ,http://www.bloomberg.com/quote/ISEQ:IND,hoch,
+db:bankscope,BvD BankScope,BankScope,http://www.bvdinfo.com/de-de/our-products/company-information/international-products/bankscope,hoch,http://dx.doi.org/10.1016/j.jbankfin.2013.02.004
+db:orbis,BvD Orbis,Orbis,http://www.bvdinfo.com/de-de/our-products/company-information/international-products/orbis,,
+db:isis,BvD Isis,Isis,https://isis.bvdinfo.com/version-2016317/home.serv?product=IsisNeo,mittel,
+db:cac40,CAC 40 Index,CAC40,http://www.bloomberg.com/quote/CAC:IND,hoch,http://dx.doi.org/10.1080/0960310042000243547
+db:dax100,Deutsche Boerse AG German Stock Index DAX,DAX100,http://www.bloomberg.com/quote/DAX:IND,hoch,http://dx.doi.org/10.1080/0960310042000243547
+db:ibex35,IBEX 35 Index,IBEX35,http://www.bloomberg.com/quote/IBEX:IND,hoch,http://dx.doi.org/10.1080/0960310042000243547
+db:wgi,World Bank World Governance Indicators,WGI,http://data.worldbank.org/data-catalog/worldwide-governance-indicators,,http://dx.doi.org/10.1016/j.jbankfin.2013.02.004
+db:bloomberg,Bloomberg,Bloomberg,http://www.bloomberg.com,mittel,http://dx.doi.org/10.1016/j.jbankfin.2013.02.004
+db:dice,Database for Institutional Comparisons in Europe (DICE),DICE Report,https://www.cesifo-group.de/de/ifoHome/facts/DICE.html,gering,http://dx.doi.org/10.1016/j.jbankfin.2013.02.004
+db:chelem,CEPII CHELEM,CHELEM,http://www.cepii.fr/cepii/en/bdd_modele/presentation.asp?id=17,mittel,https://mpra.ub.uni-muenchen.de/id/eprint/3457
+db:gravity,CEPII Gravity,,http://www.cepii.fr/CEPII/en/bdd_modele/presentation.asp?id=8,gering,
+db:econmap,CEPII EconMap,EconMap,http://www.cepii.fr/cepii/en/bdd_modele/presentation.asp?id=11,hoch,ttps://mpra.ub.uni-muenchen.de/id/eprint/54122
+db:macmap,CEPII Market Access Map,MAcMap,http://www.cepii.fr/anglaisgraph/bdd/macmap.htm,hoch,http://dx.doi.org/10.1016/j.regsciurbeco.2012.07.011
+db:baci,CEPII BACI,BACI,http://www.cepii.fr/CEPII/en/bdd_modele/presentation.asp?id=1,,ttps://mpra.ub.uni-muenchen.de/id/eprint/54122
+db:quandl,Quandl Financial and Economic Data,Quandl,https://www.quandl.com/,hoch,https://mpra.ub.uni-muenchen.de/id/eprint/69770
+db:ted,Total Economy Database,,https://www.conference-board.org/data/economydatabase/,mittel,https://mpra.ub.uni-muenchen.de/id/eprint/39059
+db:imoneynet,iMoneyNet,iMoneyNet,http://www.imoneynet.com/,hoch,https://ub-madoc.bib.uni-mannheim.de/40804
+db:zephyr,BvD Zephyr,Zephyr,https://zephyr.bvdinfo.com/version-2016718/Home.serv?product=zephyrneo,,https://ub-madoc.bib.uni-mannheim.de/35977
+db:midi,Bundesbank Mikrodatenbank Direktinvestitionen,Bundesbank Midi,https://www.bundesbank.de/Redaktion/DE/Standardartikel/Bundesbank/Forschungszentrum/forschungsdaten_mikrodaten_midi.html,,https://ub-madoc.bib.uni-mannheim.de/35977
+db:worldtaxdatabase,World Tax Database,World Tax Database,http://www.bus.umich.edu/otpr/otpr/default.asp,,
+db:execucomp,ExecuComp,ExecuComp,http://www.spcapitaliq.com/our-capabilities/our-capabilities.html?product=compustat-execucomp,hoch,
+db:nber,NBER Manufacturing Industry Database,,http://www.nber.org/nberces/,,
+db:wits,World Bank World Integrated Trade Solution,WITS,http://wits.worldbank.org/,,
+db:ilostat,ILOSTAT,ILOSTAT,https://www.ilo.org/ilostat,hoch,https://ub-madoc.bib.uni-mannheim.de/39471
+db:fdsd,World Bank Financial Development and Structure Dataset,FDSD,"http://econ.worldbank.org/WBSITE/EXTERNAL/EXTDEC/EXTRESEARCH/0,,contentMDK:20696167~pagePK:64214825~piPK:64214943~theSitePK:469382,00.html",,
