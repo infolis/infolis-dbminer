@@ -5,6 +5,7 @@ JSON_TARGETS = import/dara-solr.json import/icpsr-studies.json import/databases.
 RM = rm -f
 WGET = wget
 CURL = curl -s
+MKDIR = mkdir -p
 
 pdfbox.jar:
 	wget -O$@ "http://mirror.synyx.de/apache/pdfbox/2.0.2/pdfbox-app-2.0.2.jar"
@@ -19,12 +20,15 @@ clean:
 import: $(JSON_TARGETS)
 
 import/dara-solr.xml:
+	$(MKDIR) $(dir $@)
 	$(WGET) -O$@ "http://www.da-ra.de/solr/dara/select?rows=100000&q=resourceType:2"
 
 import/dara-solr.json: import/dara-solr.xml
+	$(MKDIR) $(dir $@)
 	$(MINER) jsonify-dara "$<" "$@"
 
 import/databases.csv:
+	$(MKDIR) $(dir $@)
 	echo "Please download as 'CSV (comma-separated)' from https://docs.google.com/spreadsheets/d/1UEp9BsnR5QrHcaBAcJ2znKmWqigWfq_4NFoU9WBtH_0/edit#gid=0"
 	exit 1
 

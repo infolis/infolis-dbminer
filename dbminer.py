@@ -13,7 +13,13 @@ import resource
 import subprocess
 import sys
 import time
-import xml.etree.cElementTree as ET
+try:
+    import lxml.etree as ET
+except ImportError:
+    try:
+        import xml.etree.cElementTree as ET
+    except ImportError:
+        import xml.etree.ElementTree as ET
 
 #-----------------------------------------------------------------------------
 # Configuration and Globals
@@ -26,7 +32,7 @@ logging.basicConfig(level=logging.DEBUG,
 COUNTER = itertools.count()
 
 # save intermediate results every n files
-BAK_INTERVAL = 100
+BAK_INTERVAL = 500
 
 DATABASES_CSV_HEADER = { "ID": 0, "TITLE": 1, "KEYWORDS": 2, 'URL': 3 }
 
@@ -115,16 +121,21 @@ def make_entity_from_oai(metafile):
     """
     root = ET.parse(metafile)
     entity = {}
-    entity['_id'] = 'entity_' + urlescape(root.find('.//dc:relation', NS).text)
     try:
+        entity['_id'] = 'entity_' + urlescape(root.find('.//dc:relation', NS).text)
         entity['identifier'] = root.find('.//dc:relation', NS).text
-        entity['name'] = root.find(".//dc:title", NS).text
-        entity['authors'] = map(xmlnode_text, root.findall('.//dc:creator', NS))
-        entity['subjects'] = map(xmlnode_text, root.findall('.//dc:subject', NS))
-        entity['language'] = root.find('.//dc:language', NS).text
+    except AttributeError, e:
+        entity['_id'] = 'entity_' + urlescape(root.find('.//dc:identifier', NS).text)
+        entity['identifier'] = root.find('.//dc:identifier', NS).text
+    entity['name'] = root.find(".//dc:title", NS).text
+    entity['authors'] = map(xmlnode_text, root.findall('.//dc:creator', NS))
+    entity['subjects'] = map(xmlnode_text, root.findall('.//dc:subject', NS))
+    entity['language'] = root.find('.//dc:language', NS).text
+    try:
         entity['abstractText'] = root.find('.//dc:description', NS).text
     except AttributeError, e:
-        logging.warn("(%s): %s" % (metafile, e))
+        logging.warn("Has no abstractText: %s"%e)
+
     return entity
 
 def make_entity_from_solr_doc(db, elem):
