@@ -130,11 +130,14 @@ def make_entity_from_oai(metafile):
     entity['name'] = root.find(".//dc:title", NS).text
     entity['authors'] = map(xmlnode_text, root.findall('.//dc:creator', NS))
     entity['subjects'] = map(xmlnode_text, root.findall('.//dc:subject', NS))
-    entity['language'] = root.find('.//dc:language', NS).text
+    try:
+        entity['language'] = root.find('.//dc:language', NS).text
+    except:
+        logging.warn("%s has no language: %s"%(entity, e))
     try:
         entity['abstractText'] = root.find('.//dc:description', NS).text
     except AttributeError, e:
-        logging.warn("Has no abstractText: %s"%e)
+        logging.warn("%s has no abstractText: %s"%(entity, e))
 
     return entity
 
@@ -148,7 +151,7 @@ def make_entity_from_solr_doc(db, elem):
     entity['identifier'] = "http://www.da-ra.de/dara/search/search_show?res_id=%s&lang=en&detail=true"%(elem.find(".//str[@name='id']").text)
     entity['name'] = elem.findtext(".//arr[@name='title']/str")
     if 'Rezension' in entity['name'] \
-        or entity['name'] == 'Data' \
+        or entity['name'].lower() in ['data', 'test', 'readme', 'contents', 'budget'] \
         or re.match(cachedRegex("^Figure.*"), entity['name']) \
         or re.match(cachedRegex("^Table.*"), entity['name']):
         #  logging.warn("Skip this, not a dataset: %s" % entity['name'])
