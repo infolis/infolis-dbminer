@@ -287,7 +287,7 @@ def jsonify_dara(darafile, outdbfile):
     db = { "entity": {}, "infolisPattern": {}, "entityLink": {} }
     cur = 0
     logging.debug("Counting documents in file ... ")
-    total = int(subprocess.check_output("grep -o \"<doc>\" %s|wc -l" % (darafile), shell=True))
+    total = int(subprocess.check_output("grep -Fo \"<doc>\" %s|wc -l" % (darafile), shell=True))
     logging.debug("... finished counting: %d" % total)
     found = 0
     t0 = time.time()
@@ -302,6 +302,8 @@ def jsonify_dara(darafile, outdbfile):
             cur += 1
             print_progress(cur, total, found, t0)
             elem.clear()
+        if elem.getparent() is None:
+            break
     with open(outdbfile, 'w') as jsonoutfile:
         jsonoutfile.write(json.dumps(db, indent=2))
 
