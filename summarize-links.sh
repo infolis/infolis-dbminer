@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "linkReason" "$1"|sort|uniq -c|sort -h
+grep -h "linkReason" "$@"|sort|uniq -c|sort -h
