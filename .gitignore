@@ -7,3 +7,4 @@ import/dara-solr*
 import/icpsr*
 test-data/solr-indent.xml
 datasets/
+*json
